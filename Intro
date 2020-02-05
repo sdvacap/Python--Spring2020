@@ -1,0 +1,32 @@
+quanah:$ cd /lustre/scratch/jenjense
+quanah:/lustre/scratch/jenjense$ ls
+200mammals                bat1K        MYOSEP-sequences     USDA
+200Mammals-old            gge_scripts  Old200M
+200mammals_rnd1_jenjense  Louisiana    tsm
+200m-old                  macro        tsm_tes_jenjense.sh
+quanah:/lustre/scratch/jenjense$ cd 200m
+200mammals/               200m-old/
+200mammals_rnd1_jenjense/
+quanah:/lustre/scratch/jenjense$ cd 200mammals
+quanah:/lustre/scratch/jenjense/200mammals$ ls
+round2_complete  round3_complete
+quanah:/lustre/scratch/jenjense/200mammals$ ls -l
+total 8
+drwxr-xr-x 23 jenjense bio 4096 Nov 18 19:30 round2_complete
+drwxr-xr-x 21 jenjense bio 4096 Jan 23 07:27 round3_complete
+quanah:$ cd
+quanah:$ pwd
+/home/svaca
+quanah:$ cd /lustre/work/svaca
+quanah:/lustre/work/svaca$ ls
+BINF                  GENOMES              projects
+blank_script.sh       hey                  PYTHON
+carolliaproj          Lecture 1.pptx       quanah
+carollia.sh           Lecture 2.pptx       Test
+carollia.sh.e1090895  machinefile.1069975  TestJob.e1069975
+carollia.sh.o1090895  machinefile.1090895  TestJob.o1069975
+quanah:/lustre/work/svaca$ cd PYTHON/
+quanah:/lustre/work/svaca/PYTHON$ mkdir testing
+quanah:/lustre/work/svaca/PYTHON$ ls
+population.py  testing  Tuition.py
+quanah:/lustre/work/svaca/PYTHON$
