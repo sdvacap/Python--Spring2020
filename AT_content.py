@@ -13,10 +13,10 @@ sequence=("ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT")
 
 ###STEP 2
 #for calculate the As content in the sequence 
-sequence.count("A")   
+print("The As content in the sequence is",sequence.count("A"))  
 #for calculate the Ts content in the sequence                                                  
-sequence.count("T") 
+print("The Ts content in the sequence is",sequence.count("T"))
 
 ###STEP 3         
 #use "count" to calculate the TA content in the sequence                                                 
-sequence.count("A")+sequence.count("T")                                 
+print("The AT content in the sequence is", sequence.count("A")+sequence.count("T"))
