@@ -31,4 +31,5 @@ sp3_specie=specie3.split(" ")[1][:3]
 sp3=sp3_genus+sp3_specie
 
 #Print results
+print("The name of the three species are ")
 print(sp1.upper(),sp2.upper(),sp3.upper(), sep='\n')
