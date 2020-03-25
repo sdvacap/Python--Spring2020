@@ -17,10 +17,15 @@ sequence=random.choices(bases,k=100)
 print(sequence)
 
 #1) Calculate the number of G's
-sequence.count("G")
+G_bp = sequence.count("G")
 
 #2) Calculate the number of A's
-sequence.count("A")
+A_bp = sequence.count("A")
 
 #3) Calculate(together) the number of A's and C's
-sequence.count("A") + sequence.count("C")
+A_and_G_bp = sequence.count("A") + sequence.count("C")
+
+#print results
+print("Number of G's " + str(G_bp))
+print("Number of A's " + str(A_bp))
+print("Number of A's and G's " + str(A_and_G_bp))
