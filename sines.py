@@ -25,7 +25,7 @@ print(bed.head())
 print("#########################")
 print("What families are?")
 families=bed.Family.unique()
-print("The families in bedfile are: ", families")
+print("The families in bedfile are: ", families)
 
 #4.  Create new dataframe from that file using only elements in family “SINE” 
 print("#########################")
