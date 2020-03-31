@@ -37,7 +37,7 @@ print(new_bed.head())
 print("#########################")
 #5.  Drop columns “Strand” and “Score”
 print("Drop columns Strand and Score..")
-new_bed=new_bed.drop(["Strand”, "Score"], axis=1 )
+new_bed=new_bed.drop(["Strand", "Score"], axis=1 )
 print(new_bed.head())
 
 print("#########################")
