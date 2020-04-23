@@ -9,11 +9,11 @@
 
 #2. Make sure it has proper column names
 #read in my bed file 
+##import modules
+import pandas as pd
 print("Read bed file...")
 bed=pd.read_csv("aVan_rm.bed", sep= "\t")        
 
-##import modules
-import pandas as pd
 print("#########################")
 print("Rename columns...")
 column_names=["Scaffold", "Start", "Stop", "Element", "Score", "Strand", "Family", "Sub-Family", "Divergence"]
@@ -42,9 +42,9 @@ print(new_bed.head())
 
 print("#########################")
 #6.  Create new column “Length”
-print("New column "Length")
+print("New column", "Length")
 new_bed["Length"]=new_bed["Stop"]-new_bed["Start"]
-print("New column created "Length" between Stop and Start")
+print("New column created", "Length", "between Stop and Start")
 print(new_bed.head())
 
 print("#########################")
