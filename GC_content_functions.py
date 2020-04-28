@@ -6,12 +6,9 @@
 
 ###1. Create a random DNA sequence that is 5,000 bp long – STRING, no spaces, no commas
 import random 
-seq=random.choices("AGTC", k=5000)
 
-','.join(seq)                                   #join the bases by comma
-bp_DNA=','.join(seq)
-bp_DNA.replace(',','')                          #replace the comma with nothing
-DNA=bp_DNA.replace(',','')
+seq=random.choices(['A','G','T','C'], k=5000)
+DNA=''.join(seq)
 print('Random DNA seq is \n', DNA)
 
 ###2. Break the sequence into smaller sequences 100 bp long
