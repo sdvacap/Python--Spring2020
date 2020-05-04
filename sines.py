@@ -17,8 +17,7 @@ bed=pd.read_csv("aVan_rm.bed", sep= "\t")
 print("#########################")
 print("Rename columns...")
 column_names=["Scaffold", "Start", "Stop", "Element", "Score", "Strand", "Family", "Sub-Family", "Divergence"]
-#give name to columns
-bed.head=column_names
+bed=pd.read_csv("aVan_rm.bed", names=column_names, sep= "\t")       #give name to columns
 print(bed.head())
 
 #3.  Determine what families are in there (SINE, etc)
