@@ -18,7 +18,7 @@ print("#########################")
 print("Rename columns...")
 column_names=["Scaffold", "Start", "Stop", "Element", "Score", "Strand", "Family", "Sub-Family", "Divergence"]
 #give name to columns
-bed.column=column_names
+bed.head=column_names
 print(bed.head())
 
 #3.  Determine what families are in there (SINE, etc)
