@@ -12,8 +12,8 @@ import pandas as pd
 
 ap=argparse.ArgumentParser()
 ap.add_argument("-r", "--READ", required=True, help="read a bedfile")
-ap.ap.add_argument("-f", "--FAMILY", required=True, help="assign a family")
-ap.ap.add_argument("-s", "--SIZE", required=True, type=int, help="enter the genome size")
+ap.add_argument("-f", "--FAMILY", required=True, help="assign a family")
+ap.add_argument("-s", "--SIZE", required=True, type=int, help="enter the genome size")
 args=vars(ap.parse_args())
 
 #1. Use avan_rm.bed file in “/lustre/work/jenjense/python/Pandas”
