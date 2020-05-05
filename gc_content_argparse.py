@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 ap=argparse.ArgumentParser()
 ap.add_argument("-l", "--LENGHT", required=True, type=int, help="enter the lenght of a entire sequence")
-ap.ap.add_argument("-p", "--SMALLSIZE", required=True, type=int, help="enter the size of a small sequence")
+ap.add_argument("-p", "--SMALLSIZE", required=True, type=int, help="enter the size of a small sequence")
 args=vars(ap.parse_args())
 
 ##1. Argparse the size of your random sequence
