@@ -26,7 +26,9 @@ print('Small sequence of 100bp long: \n' , small_seq)
 def GC_calculator(sequence):
     G=sequence.count("G")
     C=sequence.count("C")
-    G_C=(G+C)/100
+    A=sequence.count("A")
+    T=sequence.count("T")
+    G_C=(G+C)/(G+C+A+T)
     return G_C
 
 #Function to calculate the GC content for each smaller sequence 
