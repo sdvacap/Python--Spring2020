@@ -32,13 +32,9 @@ print('The longest record is: \n' , max(long, key=len)
 
 #4. Run your GC function on each record sequence
 #Function to calculate the GC content
-def GC_calculator(sequence):
-    G=sequence.count("G")
-    C=sequence.count("C")
-    A=sequence.count("A")
-    T=sequence.count("T")
-    G_C=(G+C)/(G+C+A+T)
-    return G_C
+def GC_calculator(seq):
+    G_C=((seq.count("G"))+(seq.count("C")))/ len(seq)
+    return (G_C * 100) 
     
 #Calculation of the GC content for each record sequence     
 rec=[]
