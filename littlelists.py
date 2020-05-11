@@ -6,7 +6,7 @@
 
 #“The quick brown fox jumped over the lazy dog”
 
-string=(“The quick brown fox jumped over the lazy dog”)
+string=('The quick brown fox jumped over the lazy dog')
 print(string)
 
 ###1. Count the number of spaces in the above string. 
