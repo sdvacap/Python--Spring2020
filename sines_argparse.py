@@ -66,9 +66,9 @@ print(new_bed["Length"].mean())
 print("#########################")
 #8.  Determine min, max, and mean length for each sub-family of SINE (metulj and ZenoSINE)
 print("What is the minimum, maximun and mean length for each sub-family of SINE?")
-print(new_bed.groupy("Sub-Family")["Length"].min())
-print(new_bed.groupy("Sub-Family")["Length"].max())
-print(new_bed.groupy("Sub-Family")["Length"].mean())
+print(new_bed.groupby("Sub-Family")["Length"].min())
+print(new_bed.groupby("Sub-Family")["Length"].max())
+print(new_bed.groupby("Sub-Family")["Length"].mean())
 print("#########################")
 
 #Create new column “Proportion” which is Length/genome size ***new step ***
