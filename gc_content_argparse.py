@@ -26,7 +26,7 @@ print('The size of your random seq is \n', DNA)
 #break the random seq in smaller sequences
 #bp=DNA[bp:bp+arg["SMALLSIZE"]]                                    
 small_seq=[]
-for bp in range (0, args["LENGHT"], 100):
+for bp in range (0, args["LENGHT"], arg["SMALLSIZE"]):
     small_seq.append(DNA[bp:bp+arg["SMALLSIZE"]])
 
 print('The size of your small seq is \n' , small_seq)
@@ -45,7 +45,7 @@ for i in small_seq:
 print('The GC content for each smaller sequence is: \n', GC_content)    
 
 ##3. Create a histogram for Gccontent *** new step ***
-plt.hist(GC_content)
+img=plt.hist(GC_content)
 plt.grid(axis='y', alpha=0.75)
 plt.xlabel('GC Content', fontsize=10)
 plt.ylabel('Frequency', fontsize=10)
