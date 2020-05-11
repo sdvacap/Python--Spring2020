@@ -21,25 +21,12 @@ print('Small sequence of 100bp long: \n' , small_seq)
     
 ###3. In a loop, use the GC function you created to calculate the GC content for each smaller sequence
 
-#Function to calculate the GC content
-#def GC_calculator(small_seq):
-#    G_C=((small_seq.count("G"))+(small_seq.count("C")))/100
-#    return (G_C * 100)     
-            
-
-def GC_calculator(small_seq):
-    G=small_seq.count('G')
-    C=small_seq.count('C')
-    G_C=(G+C)/len(small_seq)
-    return (G_C)
-
-#def bp_count(seq, allowed_bases=['G','C']):
-#    seq=seq.upper()
-#    total_dna_bases=0
-#    for base in allowed_bases:
-#        total_dna_bases
-#    dna_fraction=total_dna_bases / len(seq)
-#    return(dna_fraction * 100)    
+#Function to calculate the GC content 
+def GC_calculator(DNA):
+    G=seq.count('G')
+    C=seq.count('C')
+    G_C=(G+C)/len(seq)
+    return (G_C * 100)
 
 #Function to calculate the GC content for each smaller sequence 
 GC_content=[GC_calculator(i) for i in small_seq]
