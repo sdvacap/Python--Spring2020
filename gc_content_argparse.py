@@ -24,10 +24,10 @@ print('The size of your random seq is \n', DNA)
 
 ##2. Argparse the size of your smaller sequences
 #break the random seq in smaller sequences
-bp=DNA[bp:bp+arg["SMALLSIZE"]]                                    
+#bp=DNA[bp:bp+arg["SMALLSIZE"]]                                    
 small_seq=[]
 for bp in range (0, args["LENGHT"], 100):
-    small_seq.append(bp)
+    small_seq.append(DNA[bp:bp+arg["SMALLSIZE"]])
 
 print('The size of your small seq is \n' , small_seq)
 
