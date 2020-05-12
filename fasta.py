@@ -12,29 +12,30 @@ import matplotlib.pyplot as plt
 ####################################### ARGUMENTS ##########################################
 ############################################################################################
 
-ap=argparse.ArgumentParser()
-ap.add_argument("-f", "--FASTA", required=True, help="read the fasta file")
-ap.add_argument("-n", "--NAME", required=True, help="read the taxon name file")
-args=vars(ap.parse_args())
+#ap=argparse.ArgumentParser()
+#ap.add_argument("-f", "--FASTA", required=True, help="read the fasta file")
+#ap.add_argument("-n", "--NAME", required=True, help="read the taxon name file")
+#args=vars(ap.parse_args())
 
 #2. Determine how many records are in the file
 #for record in SeqIO.parse("dIul.fa", "fasta"):
 #    print(record.id)
     
 num_rec=[record for record in SeqIO.parse("dIul.fa", "fasta")]
-    print('The number of records in the file is: \n' , len(num_rec))    
+print('The number of records in the file is: \n' , len(num_rec))    
 
 #3. What is the shortest record? What is the longest record? 
-short=[record for record in SeqIO.parse("dIul.fa", "fasta")]
-print('The shortest record is: \n', min(short, key=len)
-long=[record for record in SeqIO.parse("dIul.fa", "fasta")]
-print('The longest record is: \n' , max(long, key=len)
+short=[len(record) for record in SeqIO.parse("dIul.fa", "fasta")]
+print('The shortest record is: \n', min(short))
+
+#long=[record for record in SeqIO.parse("dIul.fa", "fasta")]
+print('The longest record is: \n', max(short))
 
 #4. Run your GC function on each record sequence
 #Function to calculate the GC content
 def GC_calculator(seq):
     G_C=((seq.count("G"))+(seq.count("C")))/ len(seq)
-    return (G_C * 100) 
+    return (G_C * 100)   
     
 #Calculation of the GC content for each record sequence     
 rec=[]
@@ -43,10 +44,10 @@ for record in SeqIO.parse("dIul.fa", "fasta"):
     
 print(rec)    
 
-GC_content=[]
-for i in rec:
-    GC_calculator(i)
-    print('The GC content for each record sequence is: \n', GC_content)    
+GC_content=[GC_calculator(i) for i in rec]
+#for i in rec:
+#    GC_calculator(i)
+print('The GC content for each record sequence is: \n', GC_content)    
 
 #5. Plot a histogram of GC content (Hint: may need to save the results first)
 plt.hist(GC_content)
@@ -60,10 +61,10 @@ plt.savefig("GC_content_hist")
 plt.show()
 
 #6. Which record has most GC content? Which record has least GC content?
-more=[record for record in SeqIO.parse("dIul.fa", "fasta") if GC_calculator(i) == max(GC_content)]
-print('The record with most GC content: \n', record.id, GC_calculator(i))
-less=[record for record in SeqIO.parse("dIul.fa", "fasta") if GC_calculator(i) == min(GC_content)]
-print('The record with least GC content: \n', record.id, GC_calculator(i))
+more=[record for record in SeqIO.parse("dIul.fa", "fasta") if GC_calculator(str(record)) == max(GC_content)]
+print('The record with most GC content: \n', record.id, GC_calculator(str(record)))
+less=[record for record in SeqIO.parse("dIul.fa", "fasta") if GC_calculator(str(record)) == min(GC_content)]
+print('The record with least GC content: \n', record.id, GC_calculator(str(record)))
 
 #7. Translate each record
 trans_rec=[record.translate for record in SeqIO.parse("dIul.fa", "fasta")]
